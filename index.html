@@ -6,29 +6,41 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
 <div class="container">
-    <h2>Countries</h2>
-    <label for="search">All</label>
-    <input type="radio" checked name="type" id="all">
-    <label for="all">Search</label>
-    <input type="radio" name="type" id="search">
+    <div class="search-title">
+        <h2>Countries</h2>
+    </div>
+
+    <div class="title-radio">
+        <div class="radio">
+            <label for="all">All</label>
+            <input type="radio" checked name="type" id="all">
+            <label for="search">Search</label>
+            <input type="radio" name="type" id="search">
+        </div>
 
 
-    <div class="search-wrapper hidden">
-        <input type="text" id="searchInput" placeholder="Search...">
-        <button id="submit">Search</button>
+        <div class="search-wrapper hidden">
+            <input class="searchInput" type="text" id="searchInput" placeholder="   Search...">
+            <button class="btn-wrapper" id="submit">Search</button>
 
 
-        <div class="result hidden">
-            <p id="name"></p>
-            <img id="image" src="${" alt="">
-            <p id="languages"></p>
-            <p id="currency"></p>
-            <p id="capital"></p>
-            <a id="maps" target="_blank" href="">Google Map</a>
+            <div class="result hidden">
+                <p id="name" class="country"></p>
+                <img id="image" src="" alt="">
+                <a id="maps" target="_blank" href="" class="map">Google Map</a>
+                <p>Языки: <span id="languages"></span></p>
+                <p>Валюта: <span id="currency"></span></p>
+                <p>Столица <span id="capital"></span></p>
+                <p>Страна: <span id="country"></span></p>
+                <p>Город: <span id="city"></span></p>
+                <p>Температура: <span id="current"></span></p>
+                <p>Текст: <span id="text"></span></p>
+            </div>
         </div>
     </div>
 

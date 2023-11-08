@@ -47,21 +47,38 @@ search.addEventListener('change', () => {
     }
 })
 
-submit.addEventListener('click', () => {
+const handleSearch = () => {
     let value = searchInput.value
     result.classList.remove('hidden')
     console.log(value)
     fetch(`https://restcountries.com/v3.1/name/${value}`)
         .then(res => res.json())
         .then(json => {
-            console.log(json)
+            console.log(json,'country')
             name.innerHTML = json[0].name.common
             image.src = json[0].flags.png
             language.innerHTML = Object.values(json[0].languages)
             currencies.innerHTML = Object.values(json[0].currencies).map(el => el.symbol)
             capital.innerHTML = json[0].capital
             maps.href = json[0].maps.googleMaps
+            fetch(`http://api.weatherapi.com/v1/current.json?key=f2c65364cd2644f087e60957230811&lang=ru&q=${json[0].capital}`)
+                .then(res => res.json())
+                .then(json => {
+                    console.log(json, 'weather')
+                    city.innerHTML = json.location.region
+                    country.innerHTML = json.location.country
+                    current.innerHTML = json.current.temp_c
+                    text.innerHTML = json.current.condition.text
+                })
         })
+}
+
+submit.addEventListener('click',  () => handleSearch())
+
+searchInput.addEventListener('keyup', (e) => {
+    if (e.keyCode === 13) {
+        handleSearch()
+    }
 })
 
 

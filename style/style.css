@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Garamond sans-serif;
 }
 
 .img {
@@ -9,8 +10,15 @@
     object-fit: contain;
 }
 
+body {
+    height: 100vh;
+    background-image: url("../assets/3d-rendering-planet-earth.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 .container {
-    max-width: 950px;
     margin: 0 auto;
 }
 
@@ -31,12 +39,87 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 30px;
-    background-color: #dbd7d7;
+    background-color: #0d4e72;
     padding: 20px;
     border-radius: 5px;
 }
 
 .hidden {
     display: none;
+}
+
+.search-title {
+    color: white;
+}
+
+.search-wrapper {
+    padding-bottom: 30px;
+}
+
+.search-title {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.searchInput {
+    padding: 9px 0;
+    margin-left: 40%;
+    background-color: inherit;
+    border: none;
+    border-bottom: 2px solid #1d2951;
+}
+
+.btn-wrapper {
+    background: #007cb0;
+    border-radius: 27px;
+    border: none;
+    cursor: pointer;
+    padding: 10px 30px;
+    margin: 20px 0;
+}
+
+.btn-wrapper:hover {
+    background: #1d2951;
+    transition: 0.3s;
+}
+
+
+.radio {
+    display: flex;
+    margin-left: 150px;
+    gap: 10px;
+    color: white;
+}
+
+.result {
+    background-color: white;
+    padding: 3em 2.5em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 75%;
+    left: 50%;
+    border-radius: 30px;
+}
+
+.country {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    font-weight: 400;
+    color: #222a43;
+    margin: 5px;
+}
+
+span {
+    color: #5d6274;
 }
 
