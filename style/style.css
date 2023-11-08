@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.container {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col-4 {
+    max-width: 33.33333%;
+    padding: 20px;
+}
+
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: #dbd7d7;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
